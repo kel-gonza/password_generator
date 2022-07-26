@@ -23,7 +23,6 @@ elif password_length >= 11:
     print("Strong password.")
 
 while True:
-    # this leads to the easy to read path that the user chooses
     if what_kind_pass == 'easy to read':
         # this will lead to the easy_to_read functions
         read = easy_to_read(what_kind_pass)
