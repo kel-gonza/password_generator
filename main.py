@@ -1,5 +1,7 @@
 import random
-
+from easy_read import easy_to_read
+from easy_func import easy_to_say
+from all_characters import all_characters
 characters = []
 
 print('Welcome to Password Generator!')
@@ -21,13 +23,15 @@ elif password_length >= 11:
     print("Strong password.")
 
 while True:
-    # this leads to the correct path that the user chooses
+    # this leads to the easy to read path that the user chooses
     if what_kind_pass == 'easy to read':
         # this will lead to the easy_to_read functions
-        pass
+        read = easy_to_read(what_kind_pass)
+
     elif what_kind_pass == 'easy to say':
         # this will elad to the easy to say functions
-        pass
+        say = easy_to_say(what_kind_pass)
+
     elif what_kind_pass == 'all character':
         # this will lead to the all character functions
-        pass
+        all = all_characters(what_kind_pass)
