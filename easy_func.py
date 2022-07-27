@@ -5,7 +5,7 @@ characters = []
 
 ambiguous = list(lower_letters + upper_letter + symbols + numbers)
 
-# remove ambiguous letters
+# removes ambiguous letters
 ambiguous.remove('i')
 ambiguous.remove('I')
 ambiguous.remove('l')
