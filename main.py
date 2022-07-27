@@ -2,8 +2,13 @@ from easy_read import easy_to_read
 from easy_func import easy_to_say
 from all_characters import all_characters
 
-print('Welcome to Password Generator!')
-print('Please input the type of password you want.')
+print("Welcome to Password Generator!")
+print("Just input the amount of characters you want in the password and the type of options you want for that password\n")
+print("There are three types of options: 'easy to read', 'easy to say' and 'all characters'.")
+print("\n*Easy to read*: will give you a password that has no numbers or special characters.")
+print("\n*Easy to say*: will not give you ambiguous characters like, 'i','L','l','0', or 'O'")
+print("\n*All characters*: will include all letters, numbers, and special characters.")
+print("\nEnjoy!\n")
 
 while True:
     # added an try except else, for the ValueError when the user doesn't put an input
@@ -18,10 +23,10 @@ while True:
 
 while True:
     # added a loop so the input won't stop when the user doesn't pick the right option
-    what_kind_pass = input(
-        "Pick the type of options you want for the password. ('easy to read', 'easy to say', or 'all character' options) ")
+    what_kind_pass = input("Pick the type of options you want for the password: \
+        \n'easy to read', 'easy to say', or 'all characters' options)\n ")
 
-    if what_kind_pass != 'easy to read' and what_kind_pass != 'easy to say' and what_kind_pass != 'all character':
+    if what_kind_pass != 'easy to read' and what_kind_pass != 'easy to say' and what_kind_pass != 'all characters':
         print("please, type one of the choices above.")
         continue
     else:
@@ -45,7 +50,7 @@ while True:
         print(f"This is your password: {say}")
         break
 
-    elif what_kind_pass == 'all character':
+    elif what_kind_pass == 'all characters':
         # this will lead to the all character functions
         all = all_characters(what_kind_pass, password_length)
         print(f"This is your password: {all}")
