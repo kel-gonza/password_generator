@@ -2,6 +2,7 @@ import random
 from easy_read import easy_to_read
 from easy_func import easy_to_say
 from all_characters import all_characters
+
 characters = []
 
 print('Welcome to Password Generator!')
@@ -15,22 +16,26 @@ what_kind_pass = input(
 # will also do by 'password length' is how long the password should be and how many
 # characters it will go inside the list
 
+while True:
+    if what_kind_pass == 'easy to read':
+        # this will lead to the easy_to_read functions
+        read = easy_to_read(what_kind_pass, password_length)
+        print(read)
+
+    elif what_kind_pass == 'easy to say':
+        # this will lead to the easy to say functions
+        say = easy_to_say(what_kind_pass, password_length)
+        print(say)
+
+    elif what_kind_pass == 'all character':
+        # this will lead to the all character functions
+        all = all_characters(what_kind_pass, password_length)
+        print(all)
+        break
+
 if password_length <= 6:
     print("weak password.")
 elif password_length <= 10:
     print("Medium strength password.")
 elif password_length >= 11:
     print("Strong password.")
-
-while True:
-    if what_kind_pass == 'easy to read':
-        # this will lead to the easy_to_read functions
-        read = easy_to_read(what_kind_pass)
-
-    elif what_kind_pass == 'easy to say':
-        # this will elad to the easy to say functions
-        say = easy_to_say(what_kind_pass)
-
-    elif what_kind_pass == 'all character':
-        # this will lead to the all character functions
-        all = all_characters(what_kind_pass)
