@@ -3,8 +3,6 @@ from easy_read import easy_to_read
 from easy_func import easy_to_say
 from all_characters import all_characters
 
-characters = []
-
 print('Welcome to Password Generator!')
 print('Please input the type of password you want.')
 
@@ -21,11 +19,13 @@ while True:
         # this will lead to the easy_to_read functions
         read = easy_to_read(what_kind_pass, password_length)
         print(read)
+        break
 
     elif what_kind_pass == 'easy to say':
         # this will lead to the easy to say functions
         say = easy_to_say(what_kind_pass, password_length)
         print(say)
+        break
 
     elif what_kind_pass == 'all character':
         # this will lead to the all character functions
